@@ -1,0 +1,26 @@
+{
+  "name": "fortheloveofdog",
+  "version": "1.0.0",
+  "description": "Social app for dogs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marygeorge/ForTheLoveOfDog.git"
+  },
+  "author": "Molly, Sandra, Mary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marygeorge/ForTheLoveOfDog/issues"
+  },
+  "homepage": "https://github.com/marygeorge/ForTheLoveOfDog#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql2": "^1.3.6",
+    "sequelize": "^4.3.1"
+  }
+}
