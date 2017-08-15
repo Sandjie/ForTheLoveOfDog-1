@@ -34,7 +34,7 @@
 
 <img class="profilePic" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
 
-<!–– Paws & bars --!>
+<!-- <!–– Paws & bars --!> -->
 <div>
 <img class="pawsLeft" src="assets/pawsLeft.png" alt="pawsLeft">
 <img class="pawsRight" src="assets/pawsRight.png" alt="pawsRight">
@@ -45,23 +45,38 @@
 
 
 
-<!–– Post form --!>
+<!-- <!–– Post form --!> -->
 
 <form>
-<textarea type="text" id="Message" class="formPost" placeholder="What's up pup?"></textarea>
+<textarea type="text" id="message" class="formPost" placeholder="What's up pup?"></textarea>
+
+  <!--  Submit Button -->
+
+     <input type="submit" id="submit" value="Bark It!">
+
 </form>
 
 <form action="/file-upload"
       class="dropzone"
       id="my-awesome-dropzone">
       <img class="imageBtn" src="assets/imageBtn.png" alt="image button">
+
+
 </form>
+
+ 
+
+
+  <!--   Paw Like Button -->
+    <button imgsrc="" type="button" onClick="pawLike()"></button>
+    <p><a id="pawLike">0</a></p>
 
 
 </body>
 </html>
 
 <script>
+ <script type="text/javascript">
 
 
 //javascript for dropdown nav
@@ -83,5 +98,40 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+
+// <!--  Paw Like Button function increase # of likes when clicked -->
+
+   
+    var clicks = 0;
+    function pawLike() {
+        clicks += 1;
+        document.getElementById("pawLike").innerHTML = clicks;
+    };
+
+ //     <!--   Changes color of PAW LIKE BUTTON on click
+ // -->
+ function changeColor() {
+        document.getElementById("pawLike").style.color = "light-blue";
+    }  
+
+    // <!-- Toggles between showing div of comments and hiding (maybe use slidenav below?) -->
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("bark").toggle();
+    });
+});
+
+// <!-- Comments in post need to be id="slidenav" -->
+   
+
+
+
+  
+
+
+
 
 </script>

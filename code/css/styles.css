@@ -151,3 +151,61 @@ nav ul li {
     margin-left: 500px;
     margin-top: 120px;
 }
+
+/*<!-- Bark Comment BUZZ GOES IN CSS-->*/
+.hvr-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
+  -webkit-animation-name: hvr-buzz;
+  animation-name: hvr-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/*<!-- Paw Like Button WOBBLE TOP GOES IN CSS  -->*/
+.hvr-wobble-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+  -webkit-animation-name: hvr-wobble-top;
+  animation-name: hvr-wobble-top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/*<!-- Slide COMMENT feature CSS -->*/
+#slidenav {
+  margin:0 auto;
+  width:800px;
+  background:url(images/open.png);
+  height:350px;
+  padding:20px 50px;
+  position:relative;
+}
+#open {
+  margin:0 auto;
+  width:200px;
+  background:url(images/open.png);
+  text-align:center;
+  padding:5px;
+  font-size:30px;
+}
