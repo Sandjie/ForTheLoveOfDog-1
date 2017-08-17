@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For the Love of Dog | Newsfeed</title>
+<link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
+<link rel="stylesheet" type="text/css" href="css/styles.sass">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<script src="assets/dropzone.js"></script>
+</head>
+
+<body>
+
+<img class="logo" src = "assets/logo.png" alt= "logo">
+
+<div class="navFix">
+<nav>
+<ul>
+<li><a class="aFix" href="index.html"><img class="homeBtn" src="assets/home.png" alt="home"></a></li>
+<li>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packs</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="pomeranian.html">Pomeranian Pack</a>
+    <a href="pitbull.html">Pitbull Pack</a>
+    <a href="germanShepard.html">German Shepard Pack</a>
+  </div>
+</div>
+</li>
+<li><a href="profile.html" class="profileNav">profile</a></li>
+</ul>
+</nav>
+</div>
+
+<h3 class="logOut"><a href="slideOne.html">Log Out</a></h3>
+
+<img class="profilePic" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
+
+<!–– Paws & bars --!>
+<div>
+<img class="pawsLeft" src="assets/pawsLeft.png" alt="pawsLeft">
+<img class="pawsRight" src="assets/pawsRight.png" alt="pawsRight">
+
+<img class="blackBar" src="assets/blackBar.png" alt="blackBar">
+<img class="blueBar" src="assets/blueBar.png" alt="blueBar">
+</div>
+
+
+
+<!–– Post form --!>
+
+<form>
+<input type="submit" class="barkIt" value="Bark it!">
+<textarea type="text" id="Message" class="formPost" placeholder="What's up pup?"></textarea>
+</form>
+
+<!--form drop zone-->
+<form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone">
+      <img class="imageBtn" src="assets/imageBtn.png" alt="image button">
+</form>
+
+<!-- Picture Post -->
+<img class="profilePic2" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
+
+<!--name tag-->
+<h1 class="nameTag"><em class="changeToCaps">Roscoe</em> the Pomeranian</h1>
+
+<!--overlay text-->
+<div class="container">
+  <img src="assets/picturePost.png" alt="Roscoe's picture post" class="image">
+  <div class="overlay">
+    <div class="pictureText">I Bark,<br>you bark, <br>we all bark for icecream! </div>
+  </div>
+</div>
+
+<!--Date-->
+<h1 class="dateTag">November 27th 2016 12.28</h1>
+
+<!--Comment Icon-->
+<img class="commentIcon" src="assets/barkIcon.png" alt="Comment Icon">
+<!--Empty div for number count-->
+<div class="commentNumber"><h3 class="commentNum">27</h3></div>
+<!--Like Icon-->
+<img class="likeIcon" src="assets/pawIcon.png" alt="Like Icon">
+<!--Empty div for comment count-->
+<div class="likeNumber"><h3 class="likeNum">7</h3></div>
+
+<!--Roscoe's Second Post-->
+<img class="profilePic3" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
+
+<h1 class="nameTag2"><em class="changeToCaps">Roscoe</em> the Pomeranian</h1>
+
+<h2 class="roscoeStatus">Why do humans have belly buttons & my owner can not find mine? like really we are so confused right now!</h2>
+
+<!--Date-->
+<h1 class="dateTag2">November 27th 2016 12.28</h1>
+
+<!--Comment Icon-->
+<img class="commentIcon2" src="assets/barkIcon.png" alt="Comment Icon">
+<!--Empty div for number count-->
+<div class="commentNumber2"><h3 class="commentNum">27</h3></div>
+<!--Like Icon-->
+<img class="likeIcon2" src="assets/pawIcon.png" alt="Like Icon">
+<!--Empty div for comment count-->
+<div class="likeNumber2"><h3 class="likeNum">7</h3></div>
+
+
+</body>
+</html>
+
+<script>
+
+
+//javascript for dropdown nav
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>

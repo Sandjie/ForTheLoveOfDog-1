@@ -15,9 +15,24 @@ module.exports = function(app) {
   // index route loads view.html
   app.get("/", function(req, res) {
       console.log("get in html-routes");
+      let file = path.join(__dirname, "../public/slideOne.html");
+      console.log(file);
+    res.sendFile(file);
+  });
+ app.get("/newsfeed", function(req, res) {
+      console.log("get in html-routes");
     res.sendFile(path.join(__dirname, "../public/test.html"));
   });
 
+  app.get("/signup", function(req, res) {
+      console.log("get in html-routes");
+    res.sendFile(path.join(__dirname, "../code/slideOne.html"));
+  });
+
+  app.get("/slideThree", function(req, res) {
+      console.log("get in html-routes");
+    res.sendFile(path.join(__dirname, "../code/slideThree.html"));
+  });
 //   // cms route loads cms.html
 //   app.get("/cms", function(req, res) {
 //     res.sendFile(path.join(__dirname, "../public/cms.html"));

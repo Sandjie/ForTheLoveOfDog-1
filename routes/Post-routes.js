@@ -1,15 +1,17 @@
 var db = require("../models");
+var fs = require('fs');
 module.exports = function(app) {
 
      app.post("/newPost", function(req, res) {
-    db.Post.create(req.body).then(function(result) {
-      res.json(result);
-    });
+      //console.log("newpost:"+req.body.user);
+      db.Post.create(req.body).then(function(result) {
+        res.json(result);
+      });
   });
 
   app.get("/allPosts", function(req, res) {
       db.Post.findAll({
-          include:db.Comment,
+           include:[db.User],
           order: [
             ['createdAt', 'DESC']
           ]
