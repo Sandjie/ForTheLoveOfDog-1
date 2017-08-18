@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+$("#user").val(sessionStorage.getItem("userID"));
 refreshNewsFeed();
 var myProfileImage=""
 var myid=sessionStorage.getItem("userID") *1234;
@@ -12,13 +12,13 @@ $.get("/myprofile/"+myid, function(mydata){
 
     // $("#MyProfilePic").attr("src",myProfileImage);
 
-    $("#bark").on("click", postBark);
+    // $("#bark").on("click", postBark);
 });
 
 function postBark()
 {
     var newB={
-        PostText:$("#Message").val().trim(),
+        PostText:$("#txt").val().trim(),
         UserId: sessionStorage.getItem("userID")
     };
     console.log("new post: "+ newB)
@@ -53,12 +53,18 @@ function createFeed(data)
     var div3=$("<div/>");// <div class="col-sm-6 col-sm-push-3">
     div3.addClass("col-sm-6 col-sm-push-3");
     var img=$("<img/>"); //<img class="" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
-    img.attr("height","30%");
-    img.attr("width","30%");
+    img.attr("height","27%");
+    img.attr("width","27%");
     img.attr("src",data.User.ProfileImage); 
     img.appendTo(div3);
     div3.appendTo(div2);
     div2.appendTo(div1);
+
+    //making the name appear next to image
+    //  var name=$("<h1/>"); //         <h1 class="nameTag"><em class="changeToCaps">Roscoe</em> the Pomeranian</h1>
+    // name.addClass("nameTag");
+    // name.html("<em class='changeToCaps'>"+data.User.Name+"</em> the " + data.User.Pack);
+    // name.appendTo(div3);
     
 
     var div4=$("<div/>");  //   <div class="row">
@@ -74,12 +80,32 @@ function createFeed(data)
 
     var div6=$("<div/>");  //   <div class="row">
     div6.addClass("row");
-    var div7=$("<div/>");  //     <div class="col-sm-6 col-sm-push-4">
-    div7.addClass("col-sm-2 col-sm-push-4");
-    var bark=$("<h1/>");   //      <h2 class="roscoeStatus">Why do humans have belly buttons & my owner can not find mine? like really we are so confused right now!</h2>
-    bark.addClass("roscoeStatus");
-    bark.html(data.PostText);
-    bark.appendTo(div7);
+    if(data.PostImage!==null)
+    {//col-md-6 col-md-push-4 col-sm-6 col-sm-push-3
+        var div7=$("<div/>"); //  <div class="overlayBox">
+        div7.addClass("col-md-6 col-md-push-4 col-sm-6 col-sm-push-3");
+        var div7_5=$("<div/>"); //  <div class="overlayBox">
+        div7_5.addClass("overlayBox");
+        var PostImg=$("<img/>");    //  <img src="assets/picturePost.png" alt="Roscoe's picture post" class="image">
+        PostImg.addClass("image");
+        PostImg.attr("src",data.PostImage);
+        var bark=$("<div/>");   //      <h2 class="roscoeStatus">Why do humans have belly buttons & my owner can not find mine? like really we are so confused right now!</h2>
+        bark.addClass("overlay");
+        bark.html(data.PostText);
+        PostImg.appendTo(div7_5);
+        bark.appendTo(div7_5);
+        div7_5.appendTo(div7);
+    }
+    else
+    {   
+        var div7=$("<div/>");  //     <div class="col-sm-6 col-sm-push-4">
+        div7.addClass("col-sm-2 col-sm-push-4");
+        var bark=$("<h1/>");   //      <h2 class="roscoeStatus">Why do humans have belly buttons & my owner can not find mine? like really we are so confused right now!</h2>
+        bark.addClass("roscoeStatus");
+        bark.html(data.PostText);
+        bark.appendTo(div7);
+    }
+    
     div7.appendTo(div6);
     div6.appendTo(div1);
 
@@ -92,21 +118,24 @@ function createFeed(data)
     barkImg.attr("src","assets/barkIcon.png");
     barkImg.attr("alt","Comment Icon");
     barkImg.appendTo(div9);
+    var spaceDiv=$("<div/>");   //         <div class="commentNumber"></div>
+    spaceDiv.addClass("commentNumber")
+    spaceDiv.html("")
+    spaceDiv.appendTo(div9);
     div9.appendTo(div8)
     
 
-//         <div class="commentNumber"></div>
-
     
+
     var div10=$("<div/>");  //  <div class="col-sm-6 col-sm-push-2">
     div10.addClass("col-sm-6 col-sm-push-2");
-    var barkLike=$("<img/>");    //         <img class="likeIcon" src="assets/pawIcon.png" alt="Like Icon">
-    barkLike.addClass("commentIcon");
+    var barkLike=$("<img/>"); 
+    barkLike.addClass("likeIcon");
     barkLike.attr("src","assets/pawIcon.png");
     barkLike.attr("alt","Like Icon");
     barkLike.appendTo(div10);
-    div10.appendTo(div8)
-    div8.appendTo(div1)
+    div10.appendTo(div8);
+    div8.appendTo(div1);
 
 //         <div class="likeNumber"></div>
 

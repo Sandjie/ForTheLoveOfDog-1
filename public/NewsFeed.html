@@ -56,7 +56,7 @@
 
 
 <!–– Post form --!>
-
+<form ref='uploadForm' id='uploadForm' action='/upload/post' method='post' encType="multipart/form-data">
 <div class="postForm">
   <div class="row">
     <div class="col-md-6 col-md-push-3 col-sm-6 col-sm-push-3">
@@ -65,12 +65,13 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-md-push-4 col-sm-6 col-sm-push-3" >
-        <form action="/file-upload"
-              class="dropzone"
-              id="my-awesome-dropzone">
-        <img class="imageBtn" src="assets/imageBtn.png" alt="image button">
-        <textarea type="text" id="Message" class="formPost" placeholder="What's up pup?"></textarea>
-        </form>
+        <!--<form action="/file-upload" class="dropzone" id="my-awesome-dropzone">-->
+        <textarea type="text" id="txt" name="txt" class="formPost" placeholder="What's up pup?"></textarea>
+        <input type="text" id="user" name="user" hidden="hidden"/>
+        <label>
+          <img class="imageBtn" src="assets/imageBtn.png" alt="image button">
+          <input type="file"  id="addFile" name="addFile"  accept="image/*" />
+        </label>
       </div>
   </div>
   <div class="row">
@@ -80,7 +81,7 @@
   </div>
   </div>
 </div>
-
+ </form>
 
 
 <div id="allBarks" name="allBarks">

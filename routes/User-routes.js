@@ -10,6 +10,16 @@ app.post('/upload/:type', function(req, res) {
     var saveas=""
     if (!req.files.addFile)
     {   console.log('No files were uploaded.');
+        if(req.body.txt)
+        {
+          db.Post.create({
+                PostText:req.body.txt,
+                UserId: req.body.user
+            }).then(function(result) {
+                // res.json(result);
+                res.redirect("/NewsFeed.html");
+            });  
+        }
 }
 //         console.log(req.files.addFile);
 //         { name: '6.JPG',
@@ -41,19 +51,17 @@ app.post('/upload/:type', function(req, res) {
         }
         else
          {  res.send("Upload only image files "); }
-    }
+    
         var post
         if(req.params.type==="post")
         {
-            
-            var returnVar=
-            {
+            db.Post.create({
                 PostText:req.body.txt,
                 PostImage:dbImg,
                 UserId: req.body.user
-            }
-            db.Post.create(returnVar).then(function(result) {
-                res.json(result);
+            }).then(function(result) {
+                // res.json(result);
+                res.redirect("/NewsFeed.html");
             });
         } 
         if(req.params.type==="profile")
@@ -80,6 +88,7 @@ app.post('/upload/:type', function(req, res) {
                 //});
             });
         }
+    }
     }); 
 
 
