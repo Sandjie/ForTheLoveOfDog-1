@@ -6,6 +6,7 @@
 <link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <script src="assets/dropzone.js"></script>
 </head>
 
@@ -13,40 +14,48 @@
 
 <img class="slidePaws" src="assets/slidePaws.png" alt="Paws">
 
-<img class="logo" src = "assets/logo.png" alt= "logo">
+<!–– Bars --!>
+<div>
+<div class="blackBar">
+  <img class="logo" src = "assets/logo.png" alt= "logo">
+</div>
+<div class="blueBar">
+  <div class="row">
+    <!--<div class="col-md-12 col-md-push-11">-->
+    <h3 class="logIn"  style="margin-left:97%"><a href="login.html">Log In</a></h3>
+    <!--</div>-->
+  </div>
+</div>
+</div>
 
-<h3 class="logIn"><a href="login.html">Log In</a></h3>
-
-<img class="blackBar" src="assets/blackBar.png" alt="blackBar">
-<img class="blueBar" src="assets/blueBar.png" alt="blueBar">
-<img class="footerBar" src="assets/footerBar.png" alt="footerBar">
+<div class="footerBar"   style="bottom:-39.5%;">
+</div>
 
 <div class="slideOne">
 
 <h2 class="morePupStuff">More Pup Stuff</h2>
-
+    
 <form>
 
-<textarea type="text" id="pupBreed" name="pupBreed" class="breed" placeholder="Breed"></textarea>
+<!--<textarea type="text" id="pupBreed" name="pupBreed" class="breed" placeholder="Breed"></textarea>
 
 <textarea type="text" id="birthday" name="birthday" class="birthday" placeholder="Birthday"></textarea>
 
-<textarea type="text" id="ZipCode" name="ZipCode" class="zipCode" placeholder="Zip Code"></textarea>
+<textarea type="text" id="ZipCode" name="ZipCode" class="zipCode" placeholder="Zip Code"></textarea>-->
 
-<!--<input type="submit" class="signUp" value="Start Barking">-->
+<input type="text" id="pupBreed" name="pupBreed" class="breed" placeholder="Breed">
+<input type="text" id="birthday" name="birthday" class="birthday" placeholder="Birthday">
+<input type="text" id="ZipCode" name="ZipCode" class="zipCode" placeholder="Zip Code">
 
 </form>
 
 <img class="slideOneBox" src="assets/slideOneBox.png" alt="slide one box">
-
-<!--<a href="index.html"><img class="startBarkingBTN" src="assets/startBarkingBTN.png" alt="Start Barking Button"></a>-->
 <img class="startBarkingBTN" id="signup3" name="signup3" src="assets/startBarkingBTN.png" alt="Start Barking Button">
 </div>
 
-<h4 class="copyright">Copyright © 2017 For The Love of Dog</h4>
+<h4 class="copyright"  style="margin-left:80%;">Copyright © 2017 For The Love of Dog</h4>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<!--<script src="js/Post.js" type="text/javascript"></script>-->
 <script src="js/user.js" type="text/javascript"></script>
 
 
