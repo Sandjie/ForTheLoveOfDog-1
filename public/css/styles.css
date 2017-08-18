@@ -584,6 +584,16 @@ nav ul li {
     margin-top: 320px;
 }
 
+#loginError {
+    font-family: blanchCaps;
+    font-size: 32px;
+    color: red;
+    background: transparent;
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 380px;
+}
+
 .next {
     font-family: blanchCaps;
     font-size: 32px;

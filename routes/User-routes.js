@@ -117,6 +117,7 @@ app.post('/upload/:type', function(req, res) {
                 Password: password
             }
         }).then(function(result) {
+            console.log(result);
             res.json(result);
         });
     });
@@ -143,6 +144,23 @@ app.post('/upload/:type', function(req, res) {
             user+="&ProfileImage="+result.ProfileImage;
             
             res.redirect("/profile.html"+user);
+        });
+    });
+
+    app.get("/myprofile/:id", function(req, res) {
+        var id= req.params.id /1234;
+        console.log("profile id:"+id);
+        var userName=req.query.userName;
+        var password=req.query.password;
+        console.log(req);
+        db.User.findOne({
+            where:{
+                id:id,
+               
+            }
+        }).then(function(result) {
+            console.log(result);
+            res.json(result);
         });
     });
 

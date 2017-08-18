@@ -47,7 +47,7 @@ function userSignup3()
 
 function loginUser()
 {
-  alert("hey");
+  
   var user={
     userName:$("#userName").val().trim(),
     password:$("#password").val().trim()
