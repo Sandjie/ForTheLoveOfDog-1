@@ -37,19 +37,20 @@
 
 <h2 class="pupStuff">Pup stuff</h2>
 
-<form>
 
-<textarea type="text" id="messageTwo" class="name" placeholder="name"></textarea>
+<form ref='uploadForm' id='uploadForm' action='/upload/profile' method='post' encType="multipart/form-data">
 
-<textarea type="text" id="messageTwo" class="image2" placeholder="image"></textarea>
-
-<!--<input type="submit" class="next" value="next">-->
+<textarea type="text" id="Name" name="Name" class="name" placeholder="name"></textarea>
+<input type="text" name="user" id="user" hidden="hidden"/>
+<label class="image2" id="filenm" style="color:grey">Profile Picture 
+<input type="file"  id="addFile" name="addFile"  accept="image/*" onchange="this.form.submit();"  style="width:0px"  />
+</label>
 
 </form>
 
-<img class="slideTwoBox" src="assets/slideTwoBox.png" alt="slide one box">
 
-<a href="slideThree.html"><img class="nextBTN" src="assets/nextBTN.png" alt="Next Button"></a>
+
+<img class="slideTwoBox" src="assets/slideTwoBox.png" alt="slide one box">
 
 
 </div>
