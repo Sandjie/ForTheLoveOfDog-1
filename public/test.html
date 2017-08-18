@@ -2,39 +2,117 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>For the Love of Dog!</title>
-
+	<title>For the Love of Dog | Newsfeed</title>
+  
 	<!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">-->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <script src="assets/dropzone.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
 
 </head>
+<style >
+  #addFile{
+    background-image: "assets/imageBtn.png";
+  }
+  
+</style>
+
 <body>
-<nav class="black" role="navigation">
-    <div class="row">
-      <div class="col l4 s8">
-        <div class="nav-wrapper container">
 
-        <img class="dogLogo" src="DOGLOGO" alt="logo">
+<img class="logo" src = "assets/logo.png" alt= "logo">
 
-        </div>
-      </div>
-      <div class="col l8 s4">
-         <ul id="nav-mobile" class="right">
-        	<li>
-          <a  id="btnLogout" class="hide">Log out</a></li>
-          </ul>
-        <div class="card-panel blue" id=remove style="padding-bottom: 39px;">
-        </div>
-      </div>
-    </div>
+<div class="navFix">
+<nav>
+<ul>
+<li><a href="index.html"><img class="homeBtn" src="assets/home.png" alt="home"></a></li>
+<li>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packs</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Pomeranian Pack</a>
+    <a href="#">Pitbull Pack</a>
+    <a href="#">German Shepard Pack</a>
+  </div>
+</div>
+</li>
+<li><a href="profile.html" class="profileNav">profile</a></li>
+</ul>
+</nav>
+</div>
 
-  </nav>
+<img class="profilePic" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
+
+<!--Paws & bars-->
+<div>
+<img class="pawsLeft" src="assets/pawsLeft.png" alt="pawsLeft">
+<img class="pawsRight" src="assets/pawsRight.png" alt="pawsRight">
+
+<img class="blackBar" src="assets/blackBar.png" alt="blackBar">
+<img class="blueBar" src="assets/blueBar.png" alt="blueBar">
+</div>
+
+
+
+<!--Post form-->
+
+<!--<form>
+<textarea type="text" id="Message" class="formPost" placeholder="What's up pup?"></textarea>
+</form>-->
+  
+<!--<form action='/upload/post'  class="dropzone"   id="my-awesome-dropzone">-->
+<form ref='uploadForm' id='uploadForm' action='/upload/post' method='post' encType="multipart/form-data">
+  <textarea type="text"  name="txt" id="txt" class="formPost" placeholder="What's up pup?"></textarea>
+  <br>
+  <input type="text" name="user" id="user" hidden="hidden"/>
+            
+  <input type="file"  id="addFile" name="addFile" accept="image/*"/></br>
+            <input type="submit" id="submitFile" value="submit" />
+  <!--<button type="submit" name="submit" class="button">
+  <img class="imageBtn" src="assets/imageBtn.png" alt="image button">
+  </button>-->
+</form>
+
 
   
+<!--
+<form ref='uploadForm' id='uploadForm' action='/upload/post' method='post' encType="multipart/form-data">
+            <input type="text" hidden="hidden" name="user" id="user" value="1"/>
+            <input type="text" hidden="hidden" name="txt" id="txt" value="this is a test post"/>
+            <input type="file"  id="addFile" name="addFile" accept="image/*"/></br>
+            <input type="submit" id="submitFile" value="submit" />
+</form>-->
+            <div id="postFeed" name="postFeed">
+                  <!--dynamically put posts here-->
+              <div>
+                <table>
+                  <tr>
+                    <td>
+                      <img width=10% height="10%"/>
+                    </td>
+                    <td>
+                      <p id="username"></p>
+                      <p id="time"></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> 
+                      <p id="posttxt"></p>
+                      <p id="postimg"></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> <p> comment and like</p> </td> 
+                  </tr>
 
-	
+                </table>
+              </div>
+            </div>
+	<script src="js/Post.js" type="text/javascript"></script>
+  <script src="js/user.js" type="text/javascript"></script>
+
 </body>
 </html>
