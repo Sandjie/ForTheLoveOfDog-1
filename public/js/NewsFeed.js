@@ -1,10 +1,18 @@
 $(document).ready(function() {
 
 refreshNewsFeed();
+var myProfileImage=""
+var myid=sessionStorage.getItem("userID") *1234;
+$.get("/myprofile/"+myid, function(mydata){
+    console.log(mydata);
+    myProfileImage=mydata.ProfileImage;
+    console.log(myProfileImage);
+    $("#MyProfilePic").attr("src",myProfileImage);
+});
 
-$("#MyProfilePic").attr("src",sessionStorage.getItem("ProfileImage"));
+    // $("#MyProfilePic").attr("src",myProfileImage);
 
-$("#bark").on("click", postBark);
+    $("#bark").on("click", postBark);
 });
 
 function postBark()
