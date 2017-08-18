@@ -158,11 +158,12 @@ nav ul li {
 .dropzone {
     font-family: blanchCaps;
     font-size: 20px;
+    float: left;
 }
-
 .imageBtn {
     position: absolute;
-    right: 180px;
+    right: 700px;
+    top: 75px;
     z-index: 1;
 }
 
