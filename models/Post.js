@@ -2,17 +2,11 @@ module.exports = function (sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
         PostText: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            allowNull: true,
         },
         PostImage: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            allowNull: true,
         },
 
     });

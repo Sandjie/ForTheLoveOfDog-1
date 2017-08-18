@@ -16,10 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     Name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      
     },
     Email: {
       type: DataTypes.STRING,
@@ -30,15 +27,19 @@ module.exports = function(sequelize, DataTypes) {
     },
     Zip: {
       type: DataTypes.DOUBLE,
-      allowNull: false,
+     
     },
     Pack: {
       type: DataTypes.STRING,
-      allowNull: false,
+     
+    },
+    ProfileImage: {
+      type: DataTypes.STRING,
+     
     },
     Age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+      type: DataTypes.STRING,
+     
     }
 
   },
