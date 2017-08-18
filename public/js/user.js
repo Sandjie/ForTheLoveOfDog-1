@@ -23,6 +23,7 @@ function userSignup1()
       console.log(data);
       sessionStorage.clear();
       sessionStorage.setItem("userID",data.id);
+      sessionStorage.setItem("ProfileImage",data.ProfileImage);
       console.log("signup1: userID"+sessionStorage.getItem("userID"));
       window.location.href = "/slideTwo.html";
     });
@@ -40,7 +41,7 @@ function userSignup3()
   }
   $.post("/newUser/step3",user, function(data){
     console.log(data);
-    window.location.href = "/notindex.html";
+    window.location.href = "/NewsFeed.html";
   });
 
 }
@@ -60,7 +61,8 @@ function loginUser()
         $("#loginError").text("");
         sessionStorage.clear();
         sessionStorage.setItem("userID",data.id);
-        window.location.href = "/notindex.html";  //change name of the html file if needed
+        sessionStorage.setItem("ProfileImage",data.ProfileImage);
+        window.location.href = "/NewsFeed.html";  //change name of the html file if needed
       }
       else{
         console.log("wrong cred");
