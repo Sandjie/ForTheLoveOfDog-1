@@ -6,7 +6,7 @@ module.exports = function(app) {
 
 app.use(fileUpload());
 app.post('/upload/:type', function(req, res) {
-    console.log("uploda what - "+req.params.type);
+    
     var saveas=""
     if (!req.files.addFile)
     {   console.log('No files were uploaded.');
@@ -62,23 +62,22 @@ app.post('/upload/:type', function(req, res) {
             db.User.update(
                 {
                     ProfileImage:dbImg,
-                    Name:req.body.Name
                 }, 
                 {where: 
                     {  id: req.body.user    }
                 }
             ).then(function(dbPost) {
-                // db.User.update(
-                // {
-                    
-                // }, 
-                // {where: 
-                //     {  id: req.body.user    }
-                // }
-                // ).then(function(dbPost) {
+                db.User.update(
+                {
+                    Name:req.body.Name,
+                }, 
+                {where: 
+                    {  id: req.body.user    }
+                }
+                ).then(function(dbPost) {
                     res.redirect("/slideThree.html");
+                });
             });
-            //});
         }
     }); 
 
