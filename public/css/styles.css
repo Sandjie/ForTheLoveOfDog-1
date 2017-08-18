@@ -162,7 +162,7 @@ nav ul li {
 }
 .imageBtn {
     position: absolute;
-    right: 700px;
+    right: 645px;
     top: 75px;
     z-index: 1;
 }
@@ -582,16 +582,6 @@ nav ul li {
     padding-bottom: 10px;
     margin-left: 510px;
     margin-top: 320px;
-}
-
-#loginError {
-    font-family: blanchCaps;
-    font-size: 32px;
-    color: red;
-    background: transparent;
-    position: absolute;
-    margin-left: 550px;
-    margin-top: 380px;
 }
 
 .next {
