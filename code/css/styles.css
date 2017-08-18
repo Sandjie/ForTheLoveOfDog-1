@@ -381,7 +381,6 @@ nav ul li {
     height: 100px;
     overflow:hidden;
 }
-
 .copyright {
     font-size: 18px;
     font-family: blanchCondensed;
@@ -412,6 +411,14 @@ nav ul li {
     height: 62px;
     width: 100%;
 }
+
+/*.footerBarProfile {
+    background-color: black;
+    height: 62px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}*/
 
 
 /*slide one box*/
@@ -2014,3 +2021,30 @@ nav ul li {
     height: 320px;
 }
   
+/*Profile Page*/
+
+
+.profileInfo {
+    font-family: blanchCaps;
+    font-size: 50px;
+    background-color: #9ddae4;
+    border-radius: 10px;
+    width: 585px;
+    height: 500px;
+    padding: 20px;
+    padding-top: 90px;
+    z-index: -20;
+    margin-top: 110px;
+}
+
+.profileImage {
+    border-radius: 250px;
+    border: 10px solid black;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 90px;
+    margin-left: 370px;
+}

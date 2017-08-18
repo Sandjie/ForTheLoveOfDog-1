@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For the Love of Dog | Profile</title>
+<link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="assets/dropzone.js"></script>
+</head>
+<style>
+#Profile{
+    position: absolute;
+}
+</style>
+
+<body>
+
+<img class="slidePaws" src="assets/slidePaws.png" alt="Paws">
+
+<div class="row">
+  <div class="col-lg-6 col-md-push-10">
+<nav>
+<ul>
+<li><a class="aFix" href="index.html"><img class="homeBtn" src="assets/home.png" alt="home"></a></li>
+<li>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packs</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="pomeranian.html">Pomeranian Pack</a>
+    <a href="pitbull.html">Pitbull Pack</a>
+    <a href="germanShepard.html">German Shepard Pack</a>
+  </div>
+</div>
+</li>
+<li><a href="errorPage.html" class="profileNav">profile</a></li>
+</ul>
+<a class="logOut" href="slideOne.html">Log Out</a>
+</nav>
+  </div>
+</div>
+
+
+<!–– Paws & bars --!>
+<div>
+<div class="blackBar">
+  <img class="logo" src = "assets/logo.png" alt= "logo">
+</div>
+<div class="blueBar">
+  
+</div>
+</div>
+
+<!--<div class="footerBarProfile">
+</div>-->
+
+<img id="profileImage" class="profileImage" name="profileImage"/ src="assets/pomeranianPack/pEight.jpg" alt="Pomeranian Eight"> </br>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-push-4 col-sm-6 col-sm-push-3">
+    <div id="Profile" name="Profile" class="profileInfo">
+
+        <label> Name:</label> <label id="Name" name="Name"></label><br>
+        <label> Birthday:</label> <label id="Age" name="Age"></label><br>
+        <label> Breed:</label> <label id="Pack" name="Pack"></label><br>
+        <label> Interests:</label> <label id="Interests" name="Interests"></label><br>
+
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<!--<script src="js/PomeranianPage.js" type="text/javascript"></script>-->
+<script src="js/Profile.js" type="text/javascript"></script>
+<script src="js/user.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+<script>
+
+
+//javascript for dropdown nav
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
