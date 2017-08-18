@@ -4,46 +4,80 @@
 <meta charset="UTF-8">
 <title>For the Love of Dog</title>
 <link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
-<link rel="stylesheet" type="text/css" href="css/styles.sass">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <script src="assets/dropzone.js"></script>
 </head>
 
 <body>
 
-<img class="slidePaws" src="assets/slidePaws.png" alt="Paws">
+<div class="row">
+  <div class="col-lg-6 col-md-push-10">
+<nav>
+<ul>
+<li><a class="aFix" href="index.html"><img class="homeBtn" src="assets/home.png" alt="home"></a></li>
+<li>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packs</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="pomeranian.html">Pomeranian Pack</a>
+    <a href="pitbull.html">Pitbull Pack</a>
+    <a href="germanShepard.html">German Shepard Pack</a>
+  </div>
+</div>
+</li>
+<li><a href="errorPage.html" class="profileNav">profile</a></li>
+</ul>
+</nav>
+  </div>
+</div>
 
-<img class="logo" src = "assets/logo.png" alt= "logo">
+<div class="footerBar">
+</div>
 
-<h3 class="logIn"><a href="login.html">Log In</a></h3>
 
-<img class="blackBar" src="assets/blackBar.png" alt="blackBar">
-<img class="blueBar" src="assets/blueBar.png" alt="blueBar">
-<img class="footerBar" src="assets/footerBar.png" alt="footerBar">
 
-<div class="slideOne">
 
-<h2 class="pupStuff">Pup stuff</h2>
+<!–– bars --!>
+<div>
 
-<form>
-
-<textarea type="text" id="messageTwo" class="name" placeholder="name"></textarea>
-
-<textarea type="text" id="messageTwo" class="image2" placeholder="image"></textarea>
-
-<!--<input type="submit" class="next" value="next">-->
-
-</form>
-
-<img class="slideTwoBox" src="assets/slideTwoBox.png" alt="slide one box">
-
-<a href="index.html"><img class="startBarking2" src="assets/startBarking2.png" alt="Start Barking"></a>
-
+<div class="blackBar">
+  <img class="logo" src = "assets/logo.png" alt= "logo">
+</div>
 
 </div>
 
-<h4 class="copyright2">Copyright © 2017 For The Love of Dog</h4>
-
+<div class="row">
+  <div class="col-md-12 padding-0">
+    <img src="assets/errorPage.png" class="errorImage" alt="Error Page image">
+  </div>
+</div>
 
 </body>
 </html>
+
+<script>
+
+
+//javascript for dropdown nav
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
