@@ -6,20 +6,31 @@
 <link rel="icon" href="assets/icon.png" sizes="16x16" type="image/png">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <script src="assets/dropzone.js"></script>
 </head>
 
 <body>
+<h3 class="logIn"><a href="login.html">Log In</a></h3>
 
 <img class="slidePaws" src="assets/slidePaws.png" alt="Paws">
 
-<img class="logo" src = "assets/logo.png" alt= "logo">
+<!–– Bars --!>
+<div>
+<div class="blackBar">
+  <img class="logo" src = "assets/logo.png" alt= "logo">
+</div>
+<div class="blueBar">
+  <div class="row">
+    <div class="col-md-12 col-md-push-11">
+    <h3 class="logIn"><a href="login.html">Log In</a></h3>
+    </div>
+  </div>
+</div>
+</div>
 
-<h3 class="logIn"><a href="login.html">Log In</a></h3>
-
-<img class="blackBar" src="assets/blackBar.png" alt="blackBar">
-<img class="blueBar" src="assets/blueBar.png" alt="blueBar">
-<img class="footerBar" src="assets/footerBar.png" alt="footerBar">
+<div class="footerBar">
+</div>
 
 <div class="slideOne">
 
@@ -31,9 +42,7 @@
 
 <textarea type="text" id="email" name="email" class="email" placeholder="Email"></textarea>
 
-<textarea type="text" id="password" name="password" class="password" placeholder="Password"></textarea>
-
-<!--<input type="submit" class="signUp" value="Sign Up">-->
+<textarea type="password" id="password" name="password" class="password" placeholder="Password"></textarea>
 
 
 <img class="slideOneBox" src="assets/slideOneBox.png" alt="slide one box">
