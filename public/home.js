@@ -55,7 +55,7 @@ $(".barkIt").on('click', function(){
     '<div class="post">'+
     '<div class="row">'+
       '<div class="col-md-6 col-md-push-3 col-sm-6 col-sm-push-3">'+
-        '<img class="" src="assets/profilePic.png" alt="Roscoe\'s Profile Picture">'+
+        '<img class="profilePictureEdit" src="assets/profilePic.png" alt="Roscoe\'s Profile Picture">'+
       '</div>'+
     '</div>'+
     '<div class="row">'+

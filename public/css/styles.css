@@ -129,6 +129,13 @@ nav ul li {
 
 /* End of navigation */
 
+.image {
+  display: block;
+  width: 81%;
+  height: auto;
+  border-radius: 10px;
+}
+
 /* Paws */
 
 .pawsLeft {
@@ -143,6 +150,12 @@ nav ul li {
     top: 0px;
     right: 0px;
     
+}
+
+.profilePictureEdit {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 /* Roscoe Profile Pic */
@@ -213,11 +226,6 @@ nav ul li {
   position: relative;
 }
 
-.image {
-  display: block;
-  width: 81%;
-  height: auto;
-}
 
 .overlay {
   position: absolute;
@@ -362,15 +370,18 @@ nav ul li {
     font-size: 25px;
     position: absolute;
     margin-top: 20px;
-    margin-left: 1420px;
+    margin-left: 1470px;
     text-decoration: none !important;
 }
 
 .slidePaws {
     z-index: -100;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    margin-left: -230px;
+    margin-top: -230px;
+    width: 117%;
 }
 
 
@@ -387,7 +398,7 @@ nav ul li {
     font-family: blanchCondensed;
     position: absolute;
     margin-top: 120px;
-    margin-left: 1280px;
+    margin-left: 1320px;
     color: white;
 }
 
@@ -395,8 +406,8 @@ nav ul li {
     font-size: 18px;
     font-family: blanchCondensed;
     position: absolute;
-    margin-top: 170px;
-    margin-left: 1280px;
+    margin-top: 150px;
+    margin-left: 1320px;
     color: white;
 }
 
