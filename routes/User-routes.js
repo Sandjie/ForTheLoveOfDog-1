@@ -61,22 +61,23 @@ app.post('/upload/:type', function(req, res) {
             console.log(req.body);
             db.User.update(
                 {
+                    Name:req.body.Name,
                     ProfileImage:dbImg,
                 }, 
                 {where: 
                     {  id: req.body.user    }
                 }
             ).then(function(dbPost) {
-                db.User.update(
-                {
-                    Name:req.body.Name,
-                }, 
-                {where: 
-                    {  id: req.body.user    }
-                }
-                ).then(function(dbPost) {
+                // db.User.update(
+                // {
+                //     Name:req.body.Name,
+                // }, 
+                // {where: 
+                //     {  id: req.body.user    }
+                // }
+                // ).then(function(dbPost) {
                     res.redirect("/slideThree.html");
-                });
+                //});
             });
         }
     }); 
