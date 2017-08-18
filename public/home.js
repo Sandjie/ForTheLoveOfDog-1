@@ -50,6 +50,7 @@
 $(".barkIt").on('click', function(){
   var post = $("#Message").val().trim();
   console.log(post);
+  //var imageUrl 
   $('.posts').prepend(
     '<div class="post">'+
     '<div class="row">'+
@@ -65,7 +66,7 @@ $(".barkIt").on('click', function(){
     '<div class="row">'+
       '<div class="col-md-6 col-md-push-4 col-sm-6 col-sm-push-3">'+
         '<div class="overlayBox">'+
-        '<img src="assets/picturePost.png" alt="Roscoe\'s picture post" class="image">'+
+        '<img src="'+ imageUrl + '" alt="Roscoe\'s picture post" class="image">'+
         '<div class="overlay">'+
           '<div class="pictureText">'+ post +'</div>'+
         '</div>'+
