@@ -16,7 +16,7 @@ if (config.use_env_variable) {
 }
 
 if(process.env.JAWSDB_URL){
-  var sequalize=new Seuqalize(process.env.JAWSDB_URL);
+  var sequalize=new Sequelize(process.env.JAWSDB_URL);
 }
 else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
