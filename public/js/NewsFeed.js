@@ -96,6 +96,7 @@ function createFeed(data)
         barkdiv.addClass("pictureText");
 
         barkdiv.html(data.PostText);
+        barkdiv.appendTo(bark);
         PostImg.appendTo(div7_5);
         bark.appendTo(div7_5);
         div7_5.appendTo(div7);
