@@ -91,8 +91,11 @@ function createFeed(data)
         PostImg.addClass("image");
         PostImg.attr("src",data.PostImage);
         var bark=$("<div/>");   //      <h2 class="roscoeStatus">Why do humans have belly buttons & my owner can not find mine? like really we are so confused right now!</h2>
-        bark.addClass("pictureText");
-        bark.html(data.PostText);
+        bark.addClass("overlay");
+        var barkdiv=$("<div/>");
+        barkdiv.addClass("pictureText");
+
+        barkdiv.html(data.PostText);
         PostImg.appendTo(div7_5);
         bark.appendTo(div7_5);
         div7_5.appendTo(div7);
