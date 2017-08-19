@@ -126,8 +126,14 @@ nav ul li {
     margin-left: 145px;
 }
 
-
 /* End of navigation */
+
+.profilePictureEdit {
+    border-radius: 100px;
+    border: 10px solid black;
+    width: 100px;
+    height: 100px;
+}
 
 /* Paws */
 
@@ -217,6 +223,7 @@ nav ul li {
   display: block;
   width: 81%;
   height: auto;
+  border-radius: 10px;
 }
 
 .overlay {
@@ -376,12 +383,20 @@ nav ul li {
 
 .footerBar {
     width: 100%;
-    position: absolute;
     left: 0;
-    bottom: 0;
-    height: 100px;
+    bottom: 0 !important;
     overflow:hidden;
+    background-color: black;
+    height: 62px;
+    width: 100%;
+    position: relative;
 }
+
+
+.footerBarSlides {
+    background-color: black;
+}
+
 .copyright {
     font-size: 18px;
     font-family: blanchCondensed;
@@ -407,11 +422,7 @@ nav ul li {
     position: relative;
 }
 
-.footerBar {
-    background-color: black;
-    height: 62px;
-    width: 100%;
-}
+
 
 /*.footerBarProfile {
     background-color: black;
@@ -794,6 +805,8 @@ nav ul li {
 
 
 /*Hover states for pets geman shepard*/
+
+
 
 .containerOne {
   position: absolute;

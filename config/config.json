@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "forTheLoveOfDogs",
-    "host": "localhost",
-    "dialect": "mysql"
+    "username": "m61m4jldbw4h03fa",
+   "password": "rsf0kt1j18orqrob",
+   "database": "mdy7enunuzkpfyja",
+   "host": "dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+   "dialect": "mysql"
   },
   "test": {
     "username": "root",
