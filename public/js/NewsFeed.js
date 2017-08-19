@@ -53,6 +53,7 @@ function createFeed(data)
     var div3=$("<div/>");// <div class="col-sm-6 col-sm-push-3">
     div3.addClass("col-sm-6 col-sm-push-3");
     var img=$("<img/>"); //<img class="" src="assets/profilePic.png" alt="Roscoe's Profile Picture">
+    img.addClass("profilePictureEdit");
     img.attr("height","27%");
     img.attr("width","27%");
     img.attr("src",data.User.ProfileImage); 
