@@ -374,6 +374,17 @@ nav ul li {
     text-decoration: none !important;
 }
 
+.signUp {
+    color: white !important;
+    font-family: blanchCaps;
+    font-size: 25px;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 1470px;
+    text-decoration: none !important;
+}
+
+
 .slidePaws {
     z-index: -100;
     position: absolute;
@@ -407,6 +418,15 @@ nav ul li {
     font-family: blanchCondensed;
     position: absolute;
     margin-top: 150px;
+    margin-left: 1320px;
+    color: white;
+}
+
+.copyright3 {
+    font-size: 18px;
+    font-family: blanchCondensed;
+    position: absolute;
+    margin-top: 110px;
     margin-left: 1320px;
     color: white;
 }
@@ -558,7 +578,7 @@ nav ul li {
     padding-left: 20px;
     padding-bottom: 10px;
     margin-left: 510px;
-    margin-top: 220px;
+    margin-top: 190px;
 }
 
 .image2 {
@@ -592,7 +612,7 @@ nav ul li {
     padding-left: 20px;
     padding-bottom: 10px;
     margin-left: 510px;
-    margin-top: 320px;
+    margin-top: 290px;
 }
 
 .next {
@@ -611,7 +631,7 @@ nav ul li {
 }
 
 .slideTwoBox {
-    margin-top: 120px;
+    margin-top: 60px;
     margin-left: 400px;
 }
 
@@ -629,7 +649,7 @@ nav ul li {
     font-size: 50px;
     color: black;
     position: absolute;
-    margin-top: 135px;
+    margin-top: 105px;
     margin-left: 650px;
 }
 
@@ -710,7 +730,7 @@ nav ul li {
 .startBarking2 {
     position: absolute;
     left: 0;
-    margin-top: 415px;
+    margin-top: 365px;
     margin-left: 858px;
 }
 
