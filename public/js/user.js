@@ -36,9 +36,11 @@ function userSignup3()
   var user={
     user:sessionStorage.getItem("userID"),
     Zip:$("#ZipCode").val().trim(),
-    Pack:$("#pupBreed").val().trim(),
+    Pack:$('#pupBreed').find(":selected").val(),
+    // Pack:$("#pupBreed").val().trim(),
     Age:$("#birthday").val().trim()
   }
+  console.log(user);
   $.post("/newUser/step3",user, function(data){
     console.log(data);
     window.location.href = "/NewsFeed.html";

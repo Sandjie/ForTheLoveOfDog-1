@@ -1,4 +1,4 @@
-;$(document).ready(function() {
+$(document).ready(function() {
 
 $("#user").val(sessionStorage.getItem("userID"));
 console.log("slideTwo.js: userID: "+sessionStorage.getItem("userID"))
